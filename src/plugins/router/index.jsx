@@ -5,6 +5,7 @@ import {
   Route
 } from "react-router-dom";
 
+// #region - IMPORT PAGES
 import Error from "pages/Error";
 // #endregion - IMPORT PAGES
 
