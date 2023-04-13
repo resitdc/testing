@@ -15,12 +15,12 @@ describe("Container component", () => {
   });
 
   it("should have default class name when default prop is true", () => {
-    const { container } = render(<Container default><div>Test</div></Container>);
+    const { container } = render(<Container default>Test</Container>);
     expect(container.firstChild).toHaveClass("mx-auto px-4 sm:px-6 lg:px-8");
   });
 
   it("should have test class name when className prop is provided", () => {
-    const { container } = render(<Container className="test-class"><div>Test</div></Container>);
+    const { container } = render(<Container className="test-class">Test</Container>);
     expect(container.firstChild).toHaveClass("test-class");
   });
 });

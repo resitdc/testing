@@ -1,0 +1,12 @@
+.table {
+  @apply table-auto w-full border-collapse;
+  thead {
+    @apply bg-black-1 text-white-1;
+  }
+  th, td {
+    @apply px-4 py-2;
+  }
+  tbody tr:nth-child(even) {
+    @apply bg-gray-1;
+  }
+}

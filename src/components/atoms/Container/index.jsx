@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 const Container = (props) => {
   const className = ["container"];
   if (props.default) className.push("mx-auto px-4 sm:px-6 lg:px-8");
-  className.push(props.className);
+  if (props.className) className.push(props.className);
   return (
     <div className={className.join(" ")}>
       { props.children }

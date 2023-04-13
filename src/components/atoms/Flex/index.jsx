@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 
 const Flex = (props) => {
   const className = ["flex"];
-  className.push(props.className);
+  if (props.className) className.push(props.className);
   return (
     <div className={className.join(" ")}>
       { props.children }

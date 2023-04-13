@@ -15,7 +15,7 @@ describe("Flex component", () => {
   });
 
   it("should have test class name when className prop is provided", () => {
-    const { container } = render(<Flex className="test-class"><div>Test</div></Flex>);
+    const { container } = render(<Flex className="test-class">Test</Flex>);
     expect(container.firstChild).toHaveClass("test-class");
   });
 });
