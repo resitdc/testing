@@ -2,6 +2,7 @@ import React from "react";
 import { Main } from "components/templates";
 import { Container, Button, Flex } from "components/atoms";
 import { useNavigate } from "react-router-dom";
+import { Modal } from "components/molecules";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,9 +19,13 @@ const Home = () => {
         <table className="table">
           <thead>
             <tr>
-              <th>No</th>
-              <th>Nama</th>
-              <th>Email</th>
+              <th>Name</th>
+              <th>eKTP</th>
+              <th>Address</th>
+              <th>Job</th>
+              <th>Date of Birth</th>
+              <th>Phone Number</th>
+              <th>Family</th>
             </tr>
           </thead>
           <tbody>
