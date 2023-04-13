@@ -8,9 +8,21 @@ const Navbar = (props) => {
   return (
     <Nav>
       <Container className="flex items-center">
-        <a href="https//resitdc.id" className="flex items-center">
-          <img src={ResitdcLogo} alt="Logo" className="w-10 h-10 mr-3" />
-          <span className="text-white-1 font-bold text-xl">resitdc</span>
+        <a
+          href="https//resitdc.id"
+          target="_blank"
+          className="flex items-center"
+        >
+          <img
+            src={ResitdcLogo}
+            alt="Logo"
+            className="w-10 h-10 mr-3"
+          />
+          <span
+            className="text-white-1 font-bold text-xl"
+          >
+            resitdc
+          </span>
         </a>
       </Container>
     </Nav>
