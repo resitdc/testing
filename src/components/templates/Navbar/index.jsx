@@ -7,7 +7,10 @@ const Navbar = (props) => {
   className.push(props.className);
   return (
     <Nav>
-      <Container className="flex items-center">
+      <Container
+        default
+        className="flex items-center"
+      >
         <a
           href="https://resitdc.id"
           target="_blank"
