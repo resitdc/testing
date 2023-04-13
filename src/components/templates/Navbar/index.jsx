@@ -9,9 +9,10 @@ const Navbar = (props) => {
     <Nav>
       <Container className="flex items-center">
         <a
-          href="https//resitdc.id"
+          href="https://resitdc.id"
           target="_blank"
           className="flex items-center"
+          rel="noreferrer"
         >
           <img
             src={ResitdcLogo}
