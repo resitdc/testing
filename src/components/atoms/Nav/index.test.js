@@ -15,7 +15,7 @@ describe("Nav component", () => {
   });
 
   it("should have test class name when className prop is provided", () => {
-    const { container } = render(<Nav className="test-class" />);
+    const { container } = render(<Nav className="test-class"><div>Test</div></Nav>);
     expect(container.firstChild).toHaveClass("test-class");
   });
 });
