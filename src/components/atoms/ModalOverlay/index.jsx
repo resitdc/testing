@@ -7,7 +7,11 @@ const ModalOverlay = ({ isOpen, closeModal, children }) => {
     : "hidden";
 
   return (
-    <div className={overlayClass} onClick={closeModal}>
+    <div
+      data-testid="modal-overlay"
+      className={overlayClass}
+      onClick={closeModal}
+    >
       {children}
     </div>
   );
