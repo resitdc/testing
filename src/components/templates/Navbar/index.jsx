@@ -1,0 +1,18 @@
+import React from "react";
+import { Container, Nav } from "components/atoms";
+
+const Navbar = (props) => {
+  const className = ["bg-black-1 p-4"];
+  className.push(props.className);
+  return (
+    <Nav>
+      <Container className="flex items-center">
+        <a href="https//resitdc.id" className="flex items-center">
+          <span className="text-white-1 font-bold text-xl">resitdc</span>
+        </a>
+      </Container>
+    </Nav>
+  );
+};
+
+export default Navbar;
