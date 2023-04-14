@@ -58,6 +58,8 @@ const AddPages = () => {
 
   const onSubmit = async (values) => {
     dispatch(addResident(values));
+    navigate("/");
+    alert("ADD DATA SUCCESS");
   };
 
   return (
