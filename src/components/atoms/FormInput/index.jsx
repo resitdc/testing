@@ -60,4 +60,23 @@ const FormInput = (props) => {
   );
 };
 
+FormInput.propTypes = {
+  name: propTypes.string,
+  type: propTypes.string,
+  pattern: propTypes.string,
+  className: propTypes.string,
+  value: propTypes.any,
+  placeholder: propTypes.string,
+  onChange: propTypes.func,
+  required: propTypes.bool,
+  readonly: propTypes.bool,
+  disabled: propTypes.bool,
+  onFocus: propTypes.func,
+  myRef: propTypes.any,
+  autoComplete: propTypes.func,
+  onKeyDown: propTypes.func,
+  onPaste: propTypes.func,
+  id: propTypes.string,
+};
+
 export default FormInput;
