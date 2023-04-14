@@ -21,6 +21,7 @@ const Button = (props) => {
   const colorStyle = {
     primary: "text-white-1 bg-primary",
     black: "text-white-1 bg-black-1",
+    red: "text-white-1 bg-red-1",
   }[color];
 
   if (size) className.push(sizeStyle);
