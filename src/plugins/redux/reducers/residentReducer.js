@@ -1,5 +1,6 @@
 const initialState = {
   residents: [],
+  detail: {},
 };
 
 const residentReducer = (state = initialState, action) => {
@@ -9,6 +10,12 @@ const residentReducer = (state = initialState, action) => {
     return {
       ...state,
       residents: [...state.residents, ...[payload]],
+    };
+
+  case "SEE_DETAIL_RESIDENT":
+    return {
+      ...state,
+      detail: payload,
     };
 
   case "CLEAR_STATE":
