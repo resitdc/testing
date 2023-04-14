@@ -16,7 +16,7 @@ const FormTextarea = (props) => {
     rows,
     cols,
   } = props;
-  const className = ["testsetsepy-2 px-3 w-full border border-gray-3 rounded-md shadow-sm focus:outline-none focus:ring-black-1 focus:border-black-1"];
+  const className = ["resize-none py-2 resize-none px-3 w-full border border-gray-3 rounded-md shadow-sm focus:outline-none focus:ring-black-1 focus:border-black-1"];
   className.push(props.className);
 
   const onChange = (event) => {
