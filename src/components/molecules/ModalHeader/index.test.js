@@ -5,19 +5,19 @@ import ModalHeader from "components/molecules/ModalHeader";
 describe("ModalHeader", () => {
   it("renders title and close button", () => {
     const title = "Modal Title";
-    const closeModal = jest.fn();
-    render(<ModalHeader title={title} closeModal={closeModal} />);
+    const onClose = jest.fn();
+    render(<ModalHeader title={title} onClose={onClose} />);
     const titleElement = screen.getByText(title);
     const closeButtonElement = screen.getByText(/close/i);
     expect(titleElement).toBeInTheDocument();
     expect(closeButtonElement).toBeInTheDocument();
   });
 
-  it("calls closeModal when close button is clicked", () => {
-    const closeModal = jest.fn();
-    render(<ModalHeader title="Modal Title" closeModal={closeModal} />);
+  it("calls onClose when close button is clicked", () => {
+    const onClose = jest.fn();
+    render(<ModalHeader title="Modal Title" onClose={onClose} />);
     const closeButtonElement = screen.getByText(/close/i);
     fireEvent.click(closeButtonElement);
-    expect(closeModal).toHaveBeenCalledTimes(1);
+    expect(onClose).toHaveBeenCalledTimes(1);
   });
 });

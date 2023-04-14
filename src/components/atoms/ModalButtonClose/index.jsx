@@ -1,20 +1,20 @@
 import React from "react";
 import propTypes from "prop-types";
 
-const ModalButtonClose = ({ closeModal, children }) => {
+const ModalButtonClose = ({ onClick, children }) => {
   return (
-    <Button
+    <button
       className="text-gray-1 hover:text-gray-3 focus:outline-none"
-      onClick={closeModal}
+      onClick={onClick}
     >
       {children}
-    </Button>
+    </button>
   );
 };
 
 ModalButtonClose.propTypes = {
   children: propTypes.node.isRequired,
-  closeModal: propTypes.func,
+  onClick: propTypes.func,
 };
 
 export default ModalButtonClose;

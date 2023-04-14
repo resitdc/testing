@@ -9,11 +9,11 @@ describe("ModalButtonClose", () => {
     expect(screen.getByText(text)).toBeInTheDocument();
   });
 
-  it("should call closeModal function when clicked", () => {
-    const mockCloseModal = jest.fn();
-    render(<ModalButtonClose closeModal={mockCloseModal}>Close</ModalButtonClose>);
+  it("should call onClick function when clicked", () => {
+    const mockOnClick = jest.fn();
+    render(<ModalButtonClose onClick={mockOnClick}>Close</ModalButtonClose>);
     const button = screen.getByRole("button");
     fireEvent.click(button);
-    expect(mockCloseModal).toHaveBeenCalledTimes(1);
+    expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 });

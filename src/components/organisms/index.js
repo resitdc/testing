@@ -1,1 +1,1 @@
-// SAMPLE FILE FOR GIT
+export { default as Modal } from "components/organisms/Modal";

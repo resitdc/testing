@@ -6,18 +6,18 @@ import {
   Flex
 } from "components/atoms";
 
-const ModalHeader = ({ closeModal, title }) => {
+const ModalHeader = ({ onClose, title }) => {
   return (
     <Flex className="px-4 py-3 justify-between items-center">
       <Title>{ title }</Title>
-      <Button onClick={closeModal}>Close</Button>
+      <Button onClick={onClose}>Close</Button>
     </Flex>
   );
 };
 
-ModalOverlay.propTypes = {
+ModalHeader.propTypes = {
   title: propTypes.string,
-  closeModal: propTypes.func,
+  onClose: propTypes.func,
 };
 
 export default ModalHeader;

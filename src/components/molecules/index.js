@@ -1,1 +1,1 @@
-export { default as Modal } from "components/molecules/Modal";
+export { default as ModalHeader } from "components/molecules/ModalHeader";
