@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 const ModalButtonClose = ({ onClick, children }) => {
   return (
     <button
-      className="text-gray-1 hover:text-gray-3 focus:outline-none"
+      className="text-red-1"
       onClick={onClick}
     >
       {children}
