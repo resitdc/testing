@@ -30,4 +30,12 @@ module.exports = {
     "no-unused-variable": "off",
     "no-unused-vars": "off",
   },
+  overrides: [
+    {
+      files: ["*.test.js", "*.test.jsx", "*.test.ts", "*.test.tsx"],
+      rules: {
+        "no-undef": "off",
+      },
+    },
+  ],
 };
