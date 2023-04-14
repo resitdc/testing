@@ -8,3 +8,5 @@ export { default as ModalButtonClose } from "components/atoms/ModalButtonClose";
 export { default as ModalTitle } from "components/atoms/ModalTitle";
 export { default as FormInput } from "components/atoms/FormInput";
 export { default as FormSelect } from "components/atoms/FormSelect";
+export { default as FormGroup } from "components/atoms/FormGroup";
+export { default as FormTextarea } from "components/atoms/FormTextarea";
