@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dbs-take-home-test/static/css/main.e00e8bb4.css",
+    "main.js": "/dbs-take-home-test/static/js/main.9e127511.js",
+    "static/js/787.3fed9203.chunk.js": "/dbs-take-home-test/static/js/787.3fed9203.chunk.js",
+    "index.html": "/dbs-take-home-test/index.html",
+    "static/media/resitdc-logo.svg": "/dbs-take-home-test/static/media/resitdc-logo.317fda50604e5081edb18024b992ec27.svg",
+    "main.e00e8bb4.css.map": "/dbs-take-home-test/static/css/main.e00e8bb4.css.map",
+    "main.9e127511.js.map": "/dbs-take-home-test/static/js/main.9e127511.js.map",
+    "787.3fed9203.chunk.js.map": "/dbs-take-home-test/static/js/787.3fed9203.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e00e8bb4.css",
+    "static/js/main.9e127511.js"
+  ]
+}
