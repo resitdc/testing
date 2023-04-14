@@ -15,7 +15,7 @@ const FormSelect = (props) => {
     dataTestid,
   } = props;
 
-  const className = ["py-2 px-3 border border-gray-3 rounded-md shadow-sm focus:outline-none focus:ring-black-1 focus:border-black-1"];
+  const className = ["py-2.5 w-full px-2 border border-gray-3 rounded-md shadow-sm focus:outline-none focus:ring-black-1 focus:border-black-1"];
 
   const onChangeHandler = (e) => {
     if (props.onChange) props.onChange(e);
