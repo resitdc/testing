@@ -11,7 +11,7 @@ const Home = () => {
     <Main>
       <Container default>
         <Flex className="items-center justify-between mx-auto my-6">
-          <h1>List User</h1>
+          <h1 className="font-bold">List User</h1>
           <Button size="sm" onClick={() => navigate("/add")}>
             Create New User
           </Button>
@@ -30,14 +30,17 @@ const Home = () => {
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>John Doe</td>
-              <td>johndoe@example.com</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jane Doe</td>
-              <td>janedoe@example.com</td>
+              <td>Restu Dwi Cahyo</td>
+              <td>3273022404000008</td>
+              <td>Pasirkaliki barat RT 04 RW 15 No 45 A</td>
+              <td>Engineer</td>
+              <td>24 April 2000</td>
+              <td>081546416749</td>
+              <td>
+                <Button size="sm" onClick={() => navigate("/add")}>
+                  Create New User
+                </Button>
+              </td>
             </tr>
           </tbody>
         </table>
