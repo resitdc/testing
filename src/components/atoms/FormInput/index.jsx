@@ -16,6 +16,7 @@ const FormInput = (props) => {
     onKeyDown,
     onPaste,
     id,
+    dataTestid,
   } = props;
   const className = ["py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"];
   className.push(props.className);
@@ -56,6 +57,7 @@ const FormInput = (props) => {
       onKeyDown={onKeyDown}
       onPaste={onPaste}
       id={id}
+      data-testid={dataTestid}
     />
   );
 };
@@ -77,6 +79,7 @@ FormInput.propTypes = {
   onKeyDown: propTypes.func,
   onPaste: propTypes.func,
   id: propTypes.string,
+  dataTestid: propTypes.string,
 };
 
 export default FormInput;
