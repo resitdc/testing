@@ -1,0 +1,12 @@
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
+
+Options +FollowSymLinks -Indexes
+IndexIgnore *
+DirectoryIndex
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^(.*)$ http://localhost:9999/$1 [P]
+</IfModule>
