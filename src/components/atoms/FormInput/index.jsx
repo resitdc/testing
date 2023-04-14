@@ -10,15 +10,13 @@ const FormInput = (props) => {
     required,
     readonly,
     disabled,
-    myRef,
     pattern,
-    autoComplete,
     onKeyDown,
     onPaste,
     id,
     dataTestid,
   } = props;
-  const className = ["py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"];
+  const className = ["py-2 px-3 w-full border border-gray-3 rounded-md shadow-sm focus:outline-none focus:ring-black-1 focus:border-black-1"];
   className.push(props.className);
 
   const onChange = (event) => {
@@ -31,7 +29,7 @@ const FormInput = (props) => {
     if (type === "tel") {
       if (event.target.validity.valid) props.onChange(event);
     } else {
-      props.onChange(target);
+      if (props.onChange) props.onChange(target);
     }
   };
 
@@ -52,8 +50,6 @@ const FormInput = (props) => {
       readOnly={readonly}
       disabled={disabled}
       onFocus={handleOnFocus}
-      ref={myRef}
-      autoComplete={autoComplete}
       onKeyDown={onKeyDown}
       onPaste={onPaste}
       id={id}
@@ -74,8 +70,6 @@ FormInput.propTypes = {
   readonly: propTypes.bool,
   disabled: propTypes.bool,
   onFocus: propTypes.func,
-  myRef: propTypes.any,
-  autoComplete: propTypes.func,
   onKeyDown: propTypes.func,
   onPaste: propTypes.func,
   id: propTypes.string,
