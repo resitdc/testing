@@ -1,6 +1,6 @@
-export const sample = (value) => {
+export const addResident = (value) => {
   return ({
-    type: "SAMPLE",
+    type: "ADD_RESIDENT",
     payload: value,
   });
 };

@@ -1,14 +1,14 @@
 const initialState = {
-  sampleState: [],
+  residents: [],
 };
 
 const sampleReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
-  case "SAMPLE":
+  case "ADD_RESIDENT":
     return {
       ...state,
-      sampleState: payload,
+      residents: { ...state.residents, ...payload },
     };
 
   case "CLEAR_STATE":

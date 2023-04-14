@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import sampleReducer from "plugins/redux/reducers/sampleReducer";
+import residentReducer from "plugins/redux/reducers/residentReducer";
 
 export default combineReducers({
-  sampleReducer,
+  residentReducer,
 });
