@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Main } from "components/templates";
 import { Container, Button, Flex } from "components/atoms";
 import { useNavigate } from "react-router-dom";
-import { Modal } from "components/molecules";
+import { ModalFamilyMembers } from "components/organisms";
+import { useSelector, useDispatch } from "react-redux";
+import { seeResidentDetail } from "plugins/redux/actions/sampleAction";
 
 const Home = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { residents } = useSelector((state) => state.residentReducer);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = (index) => {
+    if (index !== null) {
+      dispatch(seeResidentDetail(residents[index]));
+      setIsModalOpen(true);
+    }
+  };
 
   return (
     <Main>
@@ -29,21 +41,37 @@ const Home = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Restu Dwi Cahyo</td>
-              <td>3273022404000008</td>
-              <td>Pasirkaliki barat RT 04 RW 15 No 45 A</td>
-              <td>Engineer</td>
-              <td>24 April 2000</td>
-              <td>081546416749</td>
-              <td>
-                <Button size="sm" onClick={() => navigate("/add")}>
-                  Create New User
-                </Button>
-              </td>
-            </tr>
+            {
+              Array.isArray(residents)
+                ? (
+                  residents.length > 0
+                    ? residents.map(({ name, eKtp, address, job, dob, phones, familyMembers }, index) => (
+                      <tr key={index}>
+                        <td>{name}</td>
+                        <td>{eKtp}</td>
+                        <td>{address}</td>
+                        <td>{job}</td>
+                        <td>{dob}</td>
+                        <td>
+                          {phones && phones.map((a) => a.number).join(", ")}
+                        </td>
+                        <td>
+                          <Button size="sm" onClick={() => showModal(index)}>
+                            Show ({familyMembers?.length ? familyMembers.length : 0})
+                          </Button>
+                        </td>
+                      </tr>
+                    ))
+                    : <tr className="bg-red-1 text-white-1"><td colSpan="7" className="text-center">NO DATA</td></tr>
+                )
+                : <tr className="bg-red-1 text-white-1"><td colSpan="7" className="text-center">DATA ERROR</td></tr>
+            }
           </tbody>
         </table>
+        <ModalFamilyMembers
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </Container>
     </Main>
   );
