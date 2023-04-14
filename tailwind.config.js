@@ -8,8 +8,7 @@ module.exports = {
     extend: {},
     colors: {
       primary: "#19f8ff",
-      spotify: "#1ED760",
-      facebook: "#1877F2",
+      "red-1": "#d71e1e",
       "black-1": "#111",
       "white-1": "#FFFFFF",
       "gray-1": "#eeeeee",
