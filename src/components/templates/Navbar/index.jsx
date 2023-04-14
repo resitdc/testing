@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Nav } from "components/atoms";
+import { Link } from "react-router-dom";
 import ResitdcLogo from "assets/images/resitdc-logo.svg";
 
 const Navbar = (props) => {
@@ -11,12 +12,7 @@ const Navbar = (props) => {
         default
         className="flex items-center"
       >
-        <a
-          href="https://resitdc.id"
-          target="_blank"
-          className="flex items-center"
-          rel="noreferrer"
-        >
+        <Link to="/" className="flex items-center">
           <img
             src={ResitdcLogo}
             alt="Logo"
@@ -27,7 +23,7 @@ const Navbar = (props) => {
           >
             resitdc
           </span>
-        </a>
+        </Link>
       </Container>
     </Nav>
   );
