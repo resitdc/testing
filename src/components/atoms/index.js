@@ -6,3 +6,4 @@ export { default as ModalOverlay } from "components/atoms/ModalOverlay";
 export { default as Modal } from "components/atoms/Modal";
 export { default as ModalButtonClose } from "components/atoms/ModalButtonClose";
 export { default as ModalTitle } from "components/atoms/ModalTitle";
+export { default as FormInput } from "components/atoms/FormInput";
