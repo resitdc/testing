@@ -12,6 +12,8 @@ import {
   FormTextarea
 } from "components/atoms";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addResident } from "plugins/redux/actions/sampleAction";
 const relationshipOptions = [
   {
     value: "brother",
@@ -32,40 +34,30 @@ const relationshipOptions = [
 ];
 
 const AddPages = () => {
-  const [username, setUsername] = useState("");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const props = {
-    value: "value",
-    name: "test-name",
-    id: "test-id",
-    list: [
-      { value: "value1", title: "title1" },
-      { value: "value2", title: "title2" },
-      { value: "value3", title: "title3" },
-    ],
-    title: "title",
-    selected: "value1",
-    defaultChoose: "choose an option",
-    readonly: false,
-    disabled: false,
-    dataTestid: "test",
-  };
 
   const validationSchema = Yup.object().shape({
     name: Yup.string()
-      .required("Tidak boleh kosong"),
+      .required("Can not be empty"),
     address: Yup.string()
-      .required("Tidak boleh kosong"),
-    eKtp: Yup.string()
-      .required("Tidak boleh kosong"),
+      .required("Can not be empty"),
+    eKtp: Yup.number()
+      .typeError("Value must be a number")
+      .test("13", "eKTP must have at least 13 digits", (value) => {
+        if (typeof value !== "number") return false;
+        return value.toString().length >= 13;
+      }),
     job: Yup.string()
-      .required("Tidak boleh kosong"),
-    dob: Yup.string()
-      .required("Tidak boleh kosong"),
+      .required("Can not be empty"),
+    dob: Yup.date()
+      .min("1800-01-01", "Date too old")
+      .max(new Date(), "The date cannot be later than today")
+      .required("Can not be empty"),
   });
 
   const onSubmit = async (values) => {
-    console.log("VALUES ====>", values);
+    dispatch(addResident(values));
   };
 
   return (
@@ -84,42 +76,42 @@ const AddPages = () => {
           validationSchema={validationSchema}
           onSubmit={onSubmit}
         >
-          {({ errors, touched, setFieldValue, setFieldTouched, values, handleSubmit }) => (
+          {({ errors, touched, values, handleSubmit }) => (
             <Form>
               <Flex className="items-center justify-between mx-auto mt-6">
                 <h1 className="font-bold">Create New User</h1>
               </Flex>
               <Flex className="mt-9">
                 <div className="w-2/6 mr-10">
-                  <FormGroup label="Name">
+                  <FormGroup label="Name" errorMessage={errors.name}>
                     <Field
                       as={FormInput}
                       type="text"
                       name="name"
                     />
                   </FormGroup>
-                  <FormGroup label="Address">
+                  <FormGroup label="Address" errorMessage={errors.address}>
                     <Field
                       as={FormTextarea}
                       name="address"
                       rows="5"
                     />
                   </FormGroup>
-                  <FormGroup label="eKTP">
+                  <FormGroup label="eKTP" errorMessage={errors.eKtp}>
                     <Field
                       as={FormInput}
                       type="text"
                       name="eKtp"
                     />
                   </FormGroup>
-                  <FormGroup label="Job">
+                  <FormGroup label="Job" errorMessage={errors.job}>
                     <Field
                       as={FormInput}
                       type="text"
                       name="job"
                     />
                   </FormGroup>
-                  <FormGroup label="Date of Birth">
+                  <FormGroup label="Date of Birth" errorMessage={errors.dob}>
                     <Field
                       as={FormInput}
                       type="date"
