@@ -2,13 +2,13 @@ const initialState = {
   residents: [],
 };
 
-const sampleReducer = (state = initialState, action) => {
+const residentReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
   case "ADD_RESIDENT":
     return {
       ...state,
-      residents: { ...state.residents, ...payload },
+      residents: [...state.residents, ...[payload]],
     };
 
   case "CLEAR_STATE":
@@ -19,4 +19,4 @@ const sampleReducer = (state = initialState, action) => {
   }
 };
 
-export default sampleReducer;
+export default residentReducer;
