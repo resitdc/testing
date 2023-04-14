@@ -43,7 +43,7 @@ const Button = (props) => {
 Button.propTypes = {
   children: propTypes.node.isRequired,
   className: propTypes.string,
-  color: propTypes.oneOf(["primary", "black"]),
+  color: propTypes.oneOf(["primary", "black", "red"]),
   isLoading: propTypes.bool,
   size: propTypes.oneOf(["sm", "md", "lg"]),
   onClick: propTypes.func,
