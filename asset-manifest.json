@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dbs-take-home-test/static/css/main.e00e8bb4.css",
-    "main.js": "/dbs-take-home-test/static/js/main.9e127511.js",
-    "static/js/787.3fed9203.chunk.js": "/dbs-take-home-test/static/js/787.3fed9203.chunk.js",
-    "index.html": "/dbs-take-home-test/index.html",
-    "static/media/resitdc-logo.svg": "/dbs-take-home-test/static/media/resitdc-logo.317fda50604e5081edb18024b992ec27.svg",
-    "main.e00e8bb4.css.map": "/dbs-take-home-test/static/css/main.e00e8bb4.css.map",
-    "main.9e127511.js.map": "/dbs-take-home-test/static/js/main.9e127511.js.map",
-    "787.3fed9203.chunk.js.map": "/dbs-take-home-test/static/js/787.3fed9203.chunk.js.map"
+    "main.css": "/testing/static/css/main.e00e8bb4.css",
+    "main.js": "/testing/static/js/main.f415fad8.js",
+    "static/js/787.3fed9203.chunk.js": "/testing/static/js/787.3fed9203.chunk.js",
+    "index.html": "/testing/index.html",
+    "static/media/resitdc-logo.svg": "/testing/static/media/resitdc-logo.de2c55ec3f25bfcc2f6722f9f4bb4304.svg",
+    "main.e00e8bb4.css.map": "/testing/static/css/main.e00e8bb4.css.map",
+    "main.f415fad8.js.map": "/testing/static/js/main.f415fad8.js.map",
+    "787.3fed9203.chunk.js.map": "/testing/static/js/787.3fed9203.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e00e8bb4.css",
-    "static/js/main.9e127511.js"
+    "static/js/main.f415fad8.js"
   ]
 }
